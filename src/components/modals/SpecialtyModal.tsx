@@ -12,7 +12,7 @@ interface SpecialtyModalProps {
     onSave: () => void;
 }
 
-const SpecialtyModal: React.FC<SpecialtyModalProps> = ({ isOpen, onClose, specialty, onSave }) => {
+export const SpecialtyModal: React.FC<SpecialtyModalProps> = ({ isOpen, onClose, specialty, onSave }) => {
     const [formData, setFormData] = useState({
         name: '',
         description: '',

@@ -5,6 +5,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/useToast';
 import { apiService } from '@/services/api';
 import { User, UserFilters, PaginatedResponse, UserRole } from '@/types/api';
+import UserModal from '@/components/modals/UserModal';
 
 const UsersPage = () => {
     const [users, setUsers] = useState<PaginatedResponse<User> | null>(null);
@@ -375,6 +376,13 @@ const UsersPage = () => {
                     </>
                 )}
             </div>
+            {/* Modal de Usuário */}
+            <UserModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                user={selectedUser}
+                onSave={loadUsers}
+            />
         </div>
     );
 };

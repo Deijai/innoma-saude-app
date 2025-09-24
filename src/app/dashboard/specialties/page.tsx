@@ -5,6 +5,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/useToast';
 import { apiService } from '@/services/api';
 import { Specialty, SpecialtyFilters, PaginatedResponse } from '@/types/api';
+import SpecialtyModal from '@/components/modals/SpecialtyModal';
 
 const SpecialtiesPage = () => {
     const [specialties, setSpecialties] = useState<PaginatedResponse<Specialty> | null>(null);
@@ -326,6 +327,13 @@ const SpecialtiesPage = () => {
                     </>
                 )}
             </div>
+            {/* Modal de Especialidade */}
+            <SpecialtyModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                specialty={selectedSpecialty}
+                onSave={loadSpecialties}
+            />
         </div>
     );
 };
