@@ -184,8 +184,8 @@ const SpecialtiesPage = () => {
                                                                 {specialty.name}
                                                             </h3>
                                                             <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${specialty.isActive
-                                                                    ? 'bg-green-100 text-green-800'
-                                                                    : 'bg-red-100 text-red-800'
+                                                                ? 'bg-green-100 text-green-800'
+                                                                : 'bg-red-100 text-red-800'
                                                                 }`}>
                                                                 {specialty.isActive ? 'Ativa' : 'Inativa'}
                                                             </span>
@@ -299,8 +299,8 @@ const SpecialtiesPage = () => {
                                                         key={pageNum}
                                                         onClick={() => handleFilterChange({ page: pageNum })}
                                                         className={`relative inline-flex items-center px-4 py-2 border text-sm font-medium ${pageNum === (filters.page || 1)
-                                                                ? 'z-10 bg-blue-50 border-blue-500 text-blue-600'
-                                                                : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'
+                                                            ? 'z-10 bg-blue-50 border-blue-500 text-blue-600'
+                                                            : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'
                                                             }`}
                                                     >
                                                         {pageNum}

@@ -16,7 +16,7 @@ import {
 } from '@/types/api';
 
 class ApiService {
-    private baseURL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3100/api';
+    private baseURL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
 
     private getHeaders(token?: string) {
         const headers: any = {
